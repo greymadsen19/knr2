@@ -1,0 +1,9 @@
+1 No words, characters or new lines
+2 1 character words no newline
+3 1 character word with newline
+4 just a newline
+5 just blanks tabs and newlines
+
+Bugs found: when there are 0 words entered there should be 0 words
+but state is set to OUT allowing for words to be 1 if there are no characters
+but there is a new line

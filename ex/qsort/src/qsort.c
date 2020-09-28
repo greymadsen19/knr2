@@ -1,0 +1,26 @@
+void swap(int [], int, int);
+
+
+void my_qsort(int v[], int left, int right) {
+	int i, last;
+	
+	if (left >= right)
+		return;
+	
+	swap(v, right, left);
+	last = left;
+	for (i = last + 1; i <= right; i++)
+		if (v[i] < v[left])
+			swap(v, ++last, i);
+	
+	swap(v, left, last);
+	my_qsort(v, left, last - 1);
+	my_qsort(v, last + 1, right);
+}
+
+void swap(int v[], int i, int j) {
+	int temp;
+	temp = v[i];
+	v[i] = v[j];
+	v[j] = temp;
+}
