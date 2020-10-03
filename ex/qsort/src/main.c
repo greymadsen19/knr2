@@ -13,6 +13,7 @@ int main(void) {
 	
 	printf("Enter the length of an array to be sorted.\n");
 	c = getchar();
+
 	len = c - '0';
 	int v[len];
 	for (i = 0; i < len;) {

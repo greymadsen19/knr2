@@ -7,9 +7,9 @@ void my_qsort(int v[], int left, int right) {
 	if (left >= right)
 		return;
 	
-	swap(v, right, left);
+	swap(v, left, (left + right) / 2);
 	last = left;
-	for (i = last + 1; i <= right; i++)
+	for (i = left + 1; i <= right; i++)
 		if (v[i] < v[left])
 			swap(v, ++last, i);
 	
