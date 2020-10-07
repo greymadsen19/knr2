@@ -1,21 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <ctype.h>
 
 void my_qsort(int [], int, int);
 
 int main(void) {
-	int c, i;
-	int len;
-	
+	int i;
+	const int len = 9;
+	int v[len];	
+
 	srand(time(NULL));
 	
-	printf("Enter the length of an array to be sorted.\n");
-	c = getchar();
-
-	len = c - '0';
-	int v[len];
 	for (i = 0; i < len;) {
 		v[i++] = (rand() % 9) + 1;
 	}
