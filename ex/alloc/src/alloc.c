@@ -17,9 +17,10 @@ char *alloc(int n){
 
 void afree(char *p){
 	// 191867432 + 10000 = 1.9e9
-	// 201235468 true in this examples
-	// allocp is dereferenced at its current position and
-	// frees the memory by storing ahat is in p in allocp
+	// 201235468 true in this example
+	// if address of *p is >= the address of the allocbuf array
+	// and *p's address is less than the sum of allocbuf and ALLOCSIZE then
+	// free the memory by setting allocp to p
 	if (p >= allocbuf && p < allocbuf + ALLOCSIZE)
 		allocp = p;
 }
