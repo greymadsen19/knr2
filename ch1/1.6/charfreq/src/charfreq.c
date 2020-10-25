@@ -24,7 +24,7 @@ int main(void) {
         ++ascii[c];
     }
 
-    // Print a histogram veritically
+    // Print a histogram horizontally
     for (int i = 0; i < CHARS; ++i) {
         putchar(i);
 
