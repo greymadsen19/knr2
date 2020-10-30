@@ -1,0 +1,13 @@
+It is true that using
+an array directly without using
+alloc may improve the speed that
+the readlines program runs. But
+with the computing power
+of a standard desktop there is
+only a slight change in performance
+that likely won't be noticed without
+running a timer to compare the runtimes of the
+two implementations. Therefore, making
+these adjustments would be better suited for
+certain uses that may require this extra performance
+on systems that would benefit from this.
