@@ -23,7 +23,7 @@ void detab(char *to, char *from, int *tabs, int size) {
 
 int settabstop(int position, int *tabs, int size) {
   if (!size)
-    return 4;
+    return N - (position % N);
 
   while (size != 0 && position >= *tabs) {
     ++tabs;
