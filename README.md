@@ -19,5 +19,5 @@ These files are my solutions to the exercises contained within the book called<b
     GDB:         The GNU Debugger used for debugging common errors
     Valgrind:    Debugging and Profiling Tool useful for
                  detecting errors with memory management
-    Editor:      GNU EMACS
+    Editors:     GNU EMACS && VI*
     OS:          GNU+LINUX x86_64
