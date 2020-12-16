@@ -1,5 +1,4 @@
 int option;
-int pos1, pos2;
 enum states { NUMERIC = 1, REVERSE = 2, FOLD = 4, DIR = 8 };
 
 int numcmp(const char *, const char *);
