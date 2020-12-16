@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <ctype.h>
+#include "sort.h"
 
 int numcmp(const char *s1, const char *s2) {
   double v1, v2;
@@ -15,10 +16,25 @@ int numcmp(const char *s1, const char *s2) {
     return 0;
 }
 
-int fold(const char *s, const char *t) {
-  for (; toupper(*s) == toupper(*t); s++, t++)
-    if (*s == '\0')
-      return 0;
+int alnumcmp(const char *s, const char *t) {
+  int dir = option & DIR;
+  int fold = option & FOLD;
 
-  return toupper(*s) - toupper(*t);
+  if (dir) {
+    while (isalnum(*s) || isblank(*s)) {
+      ++s;
+    }
+
+    while (isalnum(*s) || isblank(*t)) {
+      ++t;
+    }
+  }
+
+  if (fold) {
+    for (; toupper(*s) == toupper(*t); s++, t++)
+      if (*s == '\0')
+        return 0;
+  }
+
+  return fold ? toupper(*s) - toupper(*t) : *s - *t;
 }
