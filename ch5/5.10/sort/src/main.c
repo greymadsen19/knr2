@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
         break;
       default:
         printf("%s: invalid option -- '%c'\n", prog, c);
-        printf("usage: %s [-nrf]\n", prog);
+        printf("usage: %s [-dfrn]\n", prog);
         return -1;
         break;
       }
