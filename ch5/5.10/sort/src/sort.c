@@ -1,4 +1,4 @@
-void qsort(void *v[], int left, int right, int (*comp)(void *, void *)) {
+void mqsort(void *v[], int left, int right, int (*comp)(void *, void *)) {
   int i, last;
   void swap(void *[], int, int);
 
@@ -13,8 +13,8 @@ void qsort(void *v[], int left, int right, int (*comp)(void *, void *)) {
       swap(v, ++last, i);
 
   swap(v, left, last);
-  qsort(v, left, last - 1, comp);
-  qsort(v, last + 1, right, comp);
+  mqsort(v, left, last - 1, comp);
+  mqsort(v, last + 1, right, comp);
 }
 
 void swap(void *v[], int i, int j) {
