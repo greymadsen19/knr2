@@ -62,7 +62,7 @@ void paramdcl(void) {
     dcl();
     paramtype = 0;
     if (tokentype == ',')
-      strcat(temp, ", ");
+      strcat(temp, ",");
     strcat(out, " ");
     strcat(out, temp);
   } while (tokentype == ',');
