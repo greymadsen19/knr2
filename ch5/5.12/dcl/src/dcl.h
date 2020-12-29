@@ -9,10 +9,12 @@ enum { FALSE, TRUE };
 
 void dcl(void);
 void dirdcl(void);
+void dclspc(void);
 
 int gettoken(void);
 int tokentype;
-extern int errtok;
+int prevtok;
+int paramtype;
 char token[MAXTOKEN];
 char name[MAXTOKEN];
 char datatype[MAXTOKEN];

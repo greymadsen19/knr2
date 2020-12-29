@@ -5,15 +5,13 @@
 static char buf[BUFSIZE];
 static int bufp = 0;
 
-int errtok = FALSE;
-
 int gettoken(void) {
   int c, getch(void);
   void ungetch(int);
   char *p = token;
 
-  if (errtok == TRUE) {
-    errtok = FALSE;
+  if (prevtok == TRUE) {
+    prevtok = FALSE;
 
     return tokentype;
   }

@@ -9,7 +9,7 @@ int main(void) {
     dcl();
     if (tokentype != '\n')
       printf("syntax error\n");
-    else if (errtok == FALSE)
+    else if (prevtok == FALSE)
       printf("%s: %s %s\n", name, out, datatype);
   }
 
